@@ -1,0 +1,32 @@
+def jarvis(user):
+    user_input = user.lower()
+    if "hello" in user or "hi" in user:
+        return "Hello! How can I help you today?"
+    elif "how are you" in user:
+        return "I'm fine, what about you?"
+    elif "i am fine" in user:
+        return "I'm glad that you are fine. what are you doing?"
+    elif "At work" in user:
+        return "can i help you"
+    elif "no thanks" in user:
+        return "i am waiting chief!"
+    elif "not well" in user:
+        return "i am worrying about you! you can share anything with me!"
+    elif "what is your name" in user:
+        return "I'm jarvis"
+    elif "Who are you" in user:
+        return "I am your assistant"
+    elif "bye" in user or "goodbye" in user:
+        return "Goodbye! Have a great day!"
+    else:
+        return "I'm not sure I understand. Can you please rephrase your question?"
+def main():
+    print("Welcome to the Chatbot! Type 'bye' to exit.")
+    while True:
+        user = input("You: ")
+        if user.lower() == "bye":
+            print("Chatbot: Goodbye! Have a great day!")
+            break
+        reply = jarvis(user)
+        print("Chatbot:", reply)
+main()
